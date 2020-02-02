@@ -1,0 +1,53 @@
+{
+  "generator-jhipster-kotlin": {
+    "promptValues": {
+      "packageName": "com.adrianb.scriptum.document_manager"
+    },
+    "jhipsterVersion": "6.6.0",
+    "applicationType": "microservice",
+    "baseName": "documentmanager",
+    "packageName": "com.adrianb.scriptum.document_manager",
+    "packageFolder": "com/adrianb/scriptum/document_manager",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YTczNzE5YzU1OTFmOWM3NTBjOGVkMmEwZGJmODBlZjFmNmFlYTI5NGQ3YjkyMGI4YThlMzJlZjY4YmJjZmUwZjExNjk2YTRjYmJmMzliMjExNzIwOWZkMGM1MWVlMjA2OTVmZmJjNDk1MzNkZmE4YTI4MDE2MGE4YjViY2UwMDc=",
+    "embeddableLaunchScript": false
+  },
+  "generator-jhipster": {
+    "jhipsterVersion": "6.6.0",
+    "creationTimestamp": 1580550511316,
+    "applicationType": "microservice",
+    "baseName": "documentmanager",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-kotlin",
+        "version": "1.4.0"
+      }
+    ],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [
+      {
+        "name": "generator-jhipster-kotlin",
+        "version": "1.4.0"
+      }
+    ],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
