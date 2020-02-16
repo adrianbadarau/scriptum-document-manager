@@ -4,7 +4,7 @@
     "relationships": [
         {
             "relationshipName": "documents",
-            "otherEntityName": "document",
+            "otherEntityName": "appDocument",
             "relationshipType": "one-to-many",
             "otherEntityRelationshipName": "category"
         }

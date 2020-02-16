@@ -4,7 +4,7 @@
     "relationships": [
         {
             "relationshipName": "documents",
-            "otherEntityName": "document",
+            "otherEntityName": "appDocument",
             "relationshipType": "many-to-many",
             "ownerSide": false,
             "otherEntityRelationshipName": "tags"

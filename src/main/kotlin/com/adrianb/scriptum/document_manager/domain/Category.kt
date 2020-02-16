@@ -29,20 +29,20 @@ class Category(
 
     @DBRef
     @Field("documents")
-    var documents: MutableSet<Document> = mutableSetOf()
+    var documents: MutableSet<AppDocument> = mutableSetOf()
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
 ) : Serializable {
 
-    fun addDocuments(document: Document): Category {
-        this.documents.add(document)
-        document.category = this
+    fun addDocuments(appDocument: AppDocument): Category {
+        this.documents.add(appDocument)
+        appDocument.category = this
         return this
     }
 
-    fun removeDocuments(document: Document): Category {
-        this.documents.remove(document)
-        document.category = null
+    fun removeDocuments(appDocument: AppDocument): Category {
+        this.documents.remove(appDocument)
+        appDocument.category = null
         return this
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove

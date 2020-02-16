@@ -1,7 +1,26 @@
 {
     "fluentMethods": true,
     "clientRootFolder": "documentmanager",
-    "relationships": [],
+    "relationships": [
+        {
+            "relationshipName": "category",
+            "otherEntityName": "category",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "name",
+            "otherEntityRelationshipName": "document"
+        },
+        {
+            "relationshipName": "tags",
+            "otherEntityName": "tag",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "name",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "documents"
+        }
+    ],
     "fields": [
         {
             "fieldName": "content",

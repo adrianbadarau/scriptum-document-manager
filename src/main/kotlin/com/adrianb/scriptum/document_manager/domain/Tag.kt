@@ -31,20 +31,20 @@ class Tag(
     @DBRef
     @Field("documents")
     @JsonIgnore
-    var documents: MutableSet<Document> = mutableSetOf()
+    var documents: MutableSet<AppDocument> = mutableSetOf()
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
 ) : Serializable {
 
-    fun addDocuments(document: Document): Tag {
-        this.documents.add(document)
-        document.tags.add(this)
+    fun addDocuments(appDocument: AppDocument): Tag {
+        this.documents.add(appDocument)
+        appDocument.tags.add(this)
         return this
     }
 
-    fun removeDocuments(document: Document): Tag {
-        this.documents.remove(document)
-        document.tags.remove(this)
+    fun removeDocuments(appDocument: AppDocument): Tag {
+        this.documents.remove(appDocument)
+        appDocument.tags.remove(this)
         return this
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
