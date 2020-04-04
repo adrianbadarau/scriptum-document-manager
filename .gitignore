@@ -144,3 +144,8 @@ Desktop.ini
 # ESLint
 ######################
 .eslintcache
+
+######################
+# Custom
+######################
+/src/main/resources/credentials.json
