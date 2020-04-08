@@ -182,13 +182,14 @@ jhipster:
 # ===================================================================
 
 # application:
+
 google:
   secret:
     key:
       path: classpath:keys/client_id.json
   oauth:
     callback:
-      uri: http://develop.com:8080/oauth
+      uri: http://develop.com:8081/google/drive/oauth/callback
   credentials:
     folder:
-      path: C:\\Users\\adiba\\code\\kotlin\\scriptum\\scriptum-document-manager\\test
+      path: file:C:\\Users\\adiba\\code\\kotlin\\scriptum\\scriptum-document-manager\\test
