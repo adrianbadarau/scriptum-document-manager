@@ -90,7 +90,6 @@ class GoogleDriveService() {
         toDrive.name = file.originalFilename
         toDrive.mimeType = "application/vnd.google-apps.document"
         val execute = drive.files().create(toDrive, content).setOcrLanguage("en").setFields("id").execute()
-        print(execute.toString())
     }
 
 }
