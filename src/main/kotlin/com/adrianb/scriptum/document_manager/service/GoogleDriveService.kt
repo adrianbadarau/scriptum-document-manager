@@ -81,12 +81,16 @@ class GoogleDriveService() {
 
     fun uploadFile(file: MultipartFile) {
         val tempFile = File("/temp", file.originalFilename!!)
+        if (tempFile.exists()) {
+            tempFile.delete()
+        }
         file.transferTo(tempFile)
         val content = FileContent(file.contentType, tempFile)
         val toDrive = com.google.api.services.drive.model.File()
         toDrive.name = file.originalFilename
-        drive.files().create(toDrive, content).setFields("id").execute()
-
+        toDrive.mimeType = "application/vnd.google-apps.document"
+        val execute = drive.files().create(toDrive, content).setOcrLanguage("en").setFields("id").execute()
+        print(execute.toString())
     }
 
 }
