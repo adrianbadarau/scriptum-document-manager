@@ -8,6 +8,7 @@ import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory
 import com.google.api.client.util.store.DataStore
 import com.google.api.client.util.store.FileDataStoreFactory
+import com.google.api.services.docs.v1.Docs
 import com.google.api.services.drive.Drive
 import com.google.api.services.drive.DriveScopes;
 import org.springframework.beans.factory.annotation.Value
@@ -21,7 +22,7 @@ import javax.annotation.PostConstruct
 import javax.servlet.http.HttpServletRequest
 
 @Service
-class GoogleDriveService() {
+class GoogleDriveService(private val googleDocsService: GoogleDocsService) {
     companion object {
         val HTTP_TRANSPORT = NetHttpTransport()
         val SCOPES = listOf(DriveScopes.DRIVE)
@@ -90,6 +91,8 @@ class GoogleDriveService() {
         toDrive.name = file.originalFilename
         toDrive.mimeType = "application/vnd.google-apps.document"
         val execute = drive.files().create(toDrive, content).setOcrLanguage("en").setFields("id").execute()
+        val document = googleDocsService.readDocumentById(execute.id)
+        print(document)
     }
 
 }

@@ -365,6 +365,11 @@
             <artifactId>google-api-services-drive</artifactId>
             <version>v3-rev20200306-1.30.9</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-docs</artifactId>
+            <version>v1-rev20200221-1.30.9</version>
+        </dependency>
     </dependencies>
 
     <build>
